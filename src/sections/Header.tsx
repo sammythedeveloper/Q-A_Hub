@@ -1,7 +1,7 @@
 "use client";
 import logoImage from "@/assets/images/sphereal-logo.svg?url";
 import { Button, ButtonProps } from "@/components/Button";
-import { div } from "framer-motion/client";
+import { Orbit } from "@/components/Orbit";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -38,7 +38,7 @@ export const loginItems = [
 }[];
 
 export const Header = () => {
-  const [isMobileNavOpen, setIsMobileNavOpen] = useState(true);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   return (
     <>
       <header className=" border-b border-gray-200/20 relative z-40 ">
@@ -101,7 +101,34 @@ export const Header = () => {
         </div>
       </header>
       {isMobileNavOpen && (
-        <div className=" fixed top-18 left-0 bottom-0 right-0 bg-gray-950 z-30 ">
+        <div className=" fixed top-18 left-0 bottom-0 right-0 bg-gray-950 z-30 overflow-hidden ">
+          <div className=" absolute-center isolate -z-10  ">
+          <Orbit/>
+          </div>{" "}
+          <div className=" absolute-center isolate -z-10  ">
+       <Orbit className=" size-[350px]"  />
+          </div>{" "}
+          <div className=" absolute-center  isolate -z-10  ">
+          <Orbit className=" size-[500px]"  />
+          </div>{" "}
+          <div className=" absolute-center isolate -z-10  ">
+          <Orbit className=" size-[650px]"  />
+          </div>
+          <div className=" absolute-center isolate -z-10  ">
+          <Orbit className=" size-[850px]"  />
+          </div>
+          {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
+  <div className="size-[200px] border border-gray-200/30 rotate-45"></div>
+</div>
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
+  <div className="size-[350px] border border-gray-200/30 rotate-45"></div>
+</div>
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
+  <div className="size-[500px] border border-gray-200/30 -rotate-45"></div>
+</div>
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
+  <div className="size-[650px] border border-gray-200/30 rotate-45"></div>
+</div> */}
           <div className=" container h-full ">
             <nav className=" flex flex-col items-center gap-4 py-8 h-full justify-center ">
               {navItems.map(({ name, href }) => (
