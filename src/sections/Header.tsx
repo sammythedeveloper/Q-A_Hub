@@ -8,15 +8,19 @@ import { twMerge } from "tailwind-merge";
 export const navItems = [
   {
     name: "Features",
-    href: "#features",
+    href: "#feature",
   },
   {
-    name: "Pricing",
-    href: "#pricing",
+    name: "About",
+    href: "#About",
   },
   {
-    name: "Testimonials",
-    href: "#testimonials",
+    name: "Community",
+    href: "#community",
+  },
+  {
+    name: "Resources",
+    href: "#resources",
   },
 ];
 
@@ -43,7 +47,7 @@ export const Header = () => {
     <>
       <header className=" border-b border-gray-200/20 relative z-40 ">
         <div className=" container">
-          <div className=" h-18 lg:h-20 flex justify-between items-center">
+          <div className=" h-18 lg:h-20 flex justify-between items-center -z-10">
             <div className=" flex gap-4 items-center">
               <div
                 className=" size-10 bg-gray-200 bg-[conic-gradient(from_45deg,var(--color-violet-400),var(--color-fuchsia-400),var(--color-amber-300),var(--color-teal-300),var(--color-violet-400))]"
@@ -103,21 +107,21 @@ export const Header = () => {
       {isMobileNavOpen && (
         <div className=" fixed top-18 left-0 bottom-0 right-0 bg-gray-950 z-30 overflow-hidden ">
           <div className=" absolute-center isolate -z-10  ">
-          <Orbit/>
+            <Orbit />
           </div>{" "}
           <div className=" absolute-center isolate -z-10  ">
-       <Orbit className=" size-[350px]"  />
+            <Orbit className=" size-[350px]" />
           </div>{" "}
           <div className=" absolute-center  isolate -z-10  ">
-          <Orbit className=" size-[500px]"  />
+            <Orbit className=" size-[500px]" />
           </div>{" "}
           <div className=" absolute-center isolate -z-10  ">
-          <Orbit className=" size-[650px]"  />
+            <Orbit className=" size-[650px]" />
           </div>
           <div className=" absolute-center isolate -z-10  ">
-          <Orbit className=" size-[850px]"  />
+            <Orbit className=" size-[850px]" />
           </div>
-          {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
   <div className="size-[200px] border border-gray-200/30 rotate-45"></div>
 </div>
 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
@@ -128,7 +132,7 @@ export const Header = () => {
 </div>
 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 isolate -z-10">
   <div className="size-[650px] border border-gray-200/30 rotate-45"></div>
-</div> */}
+</div>
           <div className=" container h-full ">
             <nav className=" flex flex-col items-center gap-4 py-8 h-full justify-center ">
               {navItems.map(({ name, href }) => (
