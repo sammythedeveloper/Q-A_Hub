@@ -1,39 +1,72 @@
-import AcmeCorpLogo from "../assets/images/acme-corp-logo.svg";
-import EchoValleyLogo from "../assets/images/echo-valley-logo.svg";
-import QuantumLogo from "../assets/images/quantum-logo.svg";
-import PulseLogo from "../assets/images/pulse-logo.svg";
-import OutsideLogo from "../assets/images/outside-logo.svg";
-import CelestialLogo from "../assets/images/celestial-logo.svg";
+import Express from "../assets/images/Express.svg";
+import React from "../assets/images/react.svg";
+import Javascript from "../assets/images/JavaScript.svg";
+import Typescript from "../assets/images/TypeScript.svg";
+import Mango from "../assets/images/MongoDB.svg";
+import Node from "../assets/images/Node.js.svg";
+import mysql from "../assets/images/MySQL.svg";
+import tailwind from "../assets/images/Tailwind CSS.svg";
+import HTML from "../assets/images/HTML5.svg";
+import CSS from "../assets/images/CSS3.svg";
+import { div } from "framer-motion/client";
 
 export const companies = [
+  
   {
-    name: "Acme Corp",
-    logo: AcmeCorpLogo,
+    name: "HTML",
+    logo: HTML,
   },
   {
-    name: "Echo Valley",
-    logo: EchoValleyLogo,
+    name: "CSS",
+    logo: CSS,
+  },{
+    name: "Javascript",
+    logo: Javascript,
   },
   {
-    name: "Quantum",
-    logo: QuantumLogo,
+    name: "Mango",
+    logo: Mango,
   },
   {
-    name: "Pulse",
-    logo: PulseLogo,
+    name: "Node",
+    logo: Node,
   },
   {
-    name: "Outside",
-    logo: OutsideLogo,
+    name: "mysql",
+    logo: mysql,
   },
   {
-    name: "Celestial",
-    logo: CelestialLogo,
+    name: "Typescript",
+    logo: Typescript,
+  },
+  {
+    name: "tailwind",
+    logo: tailwind,
+  },
+  {
+    name: "React",
+    logo: React,
   },
 ];
 
 export const Companies = () => {
-  return <section>companies</section>;
+  return <section className=" pb-[1000px]" >
+    <div className="container" >
+      <div className=" flex justify-center  " >
+        <h2 className=" text-2xl text-center font-semibold " >Empowering users to ask, answer, and collaborate on tackling complex challenges.</h2>
+      </div>
+      <div className=" flex justify-center  " >
+      <div className=" size-10 " >
+      {companies.map(({ logo:Logo, name }) => (
+        <div key={name} >
+          <Logo/>
+          
+       </div> 
+      ))}
+      </div>
+      </div>
+    </div>
+  </section>;
 };
 
 export default Companies;
