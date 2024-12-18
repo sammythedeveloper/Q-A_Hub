@@ -13,7 +13,7 @@ const classes = cva(
       color: {
         white: " from-white",
         blue: "from-blue-400",
-        fuchsia: "from-fuchsia-400",
+        green: "from-green-400",
         orange: "from-orange-400"
       },
     },
@@ -27,7 +27,7 @@ const classes = cva(
 export const Planet = (
   props: {
     size?: "sm" | "md" | "lg";
-    color?: "white" | "blue" | "fuchsia"|'orange';
+    color?: "white" | "blue" | "green"|'orange';
   } & HTMLAttributes<HTMLDivElement>
 ) => {
   return (

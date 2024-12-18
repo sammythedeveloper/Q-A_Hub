@@ -6,7 +6,7 @@ import { Orbit } from "@/components/Orbit";
 import { Planet } from "@/components/Planet";
 export const Hero = () => {
   return (
-    <section className=" pb-[1000px] ">
+    <section className="">
       <div className="container">
         <div className=" border-l border-r border-[var(--color-border)]">
           <div className=" container py-24 md:py-36 lg:py-48 relative isolate overflow-hidden [mask-image:liner-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
@@ -53,8 +53,8 @@ export const Hero = () => {
                   className=" translate-x-[334px] -translate-y-[188px] -rotate-135 "
                 />
                    <Planet
-                  size="sm"
-                  color="fuchsia"
+                  size="lg"
+                  color="green"
                   className=" translate-x-[508px] -translate-y-[372px] -rotate-135 "
                 />
                      <Planet
