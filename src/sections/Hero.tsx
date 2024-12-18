@@ -40,7 +40,7 @@ export const Hero = () => {
                 Start Chatting
               </Button>
             </div>
-            <div className="relative">
+            <div className="relative isolate max-w-5xl mx-auto">
               <div className=" absolute left-1/2 top-0 ">
                 <Planet
                   size="lg"
@@ -52,8 +52,18 @@ export const Hero = () => {
                   color="blue"
                   className=" translate-x-[334px] -translate-y-[188px] -rotate-135 "
                 />
+                   <Planet
+                  size="sm"
+                  color="fuchsia"
+                  className=" translate-x-[508px] -translate-y-[372px] -rotate-135 "
+                />
+                     <Planet
+                  size="sm"
+                  color="orange"
+                  className=" -translate-x-[488px] -translate-y-[342px] rotate-135 "
+                />
               </div>
-              <div className="mt-20 rounded-2xl border-2 overflow-hidden">
+              <div className="mt-20 rounded-2xl border-2 overflow-hidden ">
                 <div className="absolute left-1/2 top-0"></div>
                 <Image src={banner} alt="Banner" />
               </div>
