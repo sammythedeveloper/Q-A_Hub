@@ -11,10 +11,10 @@ const classes = cva(
         lg: "size-16 ",
       },
       color: {
-        white: " from-white",
+        white: "from-white",
         blue: "from-blue-400",
         green: "from-green-400",
-        orange: "from-orange-400"
+        orange: "from-orange-400",
       },
     },
     defaultVariants: {
@@ -27,7 +27,7 @@ const classes = cva(
 export const Planet = (
   props: {
     size?: "sm" | "md" | "lg";
-    color?: "white" | "blue" | "green"|'orange';
+    color?: "white" | "blue" | "green" | "orange";
   } & HTMLAttributes<HTMLDivElement>
 ) => {
   return (
